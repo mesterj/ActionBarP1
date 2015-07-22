@@ -25,12 +25,19 @@ public class ActionBarMain extends Activity {
         setContentView(R.layout.activity_action_bar_main);
         try {
             ActionBar actionBar = getActionBar();
-            actionBar.setDisplayShowHomeEnabled(false);
+            // Ez a home gomb ha lecserélem az ikonját akkor visszarak az alk. főoldalra (eggyel visszább)
+            actionBar.setDisplayShowHomeEnabled(true);
+            // Engedélyezi a feliratot ha saját layoutból fújom fel akkor kikapcs
             actionBar.setDisplayShowTitleEnabled(false);
+            // Ez ad olyan vissza jelet amivel vissza lehet menni egy képernyőt. IOS-hez szokott userek hálásak lesznek érte
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            // Itt fújom fel a saját xml
             LayoutInflater inflater = LayoutInflater.from(this);
             View myactionbar = inflater.inflate(R.layout.actbarlayout, null);
 
+            // itt állítom be a custom layoutot az actionbarhoz
             actionBar.setCustomView(myactionbar);
+            // itt történik a costum actionbar megjelenítése
             actionBar.setDisplayShowCustomEnabled(true);
         }
         catch (Exception nex) {
