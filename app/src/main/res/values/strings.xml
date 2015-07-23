@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">ActionBarP1</string>
+    <string name="app_name">CRMUIDEMO</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_menu1">Menu1</string>
 </resources>

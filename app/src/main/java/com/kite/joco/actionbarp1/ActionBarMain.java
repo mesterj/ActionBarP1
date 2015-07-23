@@ -4,6 +4,7 @@ package com.kite.joco.actionbarp1;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -71,5 +72,10 @@ public class ActionBarMain extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View v){
+        Intent i = new Intent(v.getContext(),Menu1Activity.class);
+        startActivity(i);
     }
 }
