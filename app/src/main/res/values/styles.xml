@@ -1,6 +1,6 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Base application theme. Azért kell a Holo téma, mert abban van ActionBar-->
     <style name="AppTheme" parent="@android:style/Theme.Holo">
         <!-- Customize your theme here. -->
     </style>
