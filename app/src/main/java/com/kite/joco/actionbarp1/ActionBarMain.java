@@ -30,7 +30,7 @@ public class ActionBarMain extends Activity {
             // Engedélyezi a feliratot ha saját layoutból fújom fel akkor kikapcs
             actionBar.setDisplayShowTitleEnabled(false);
             // Ez ad olyan vissza jelet amivel vissza lehet menni egy képernyőt. IOS-hez szokott userek hálásak lesznek érte
-            actionBar.setDisplayHomeAsUpEnabled(true);
+            //actionBar.setDisplayHomeAsUpEnabled(true);
             // Itt fújom fel a saját xml
             LayoutInflater inflater = LayoutInflater.from(this);
             View myactionbar = inflater.inflate(R.layout.actbarlayout, null);
