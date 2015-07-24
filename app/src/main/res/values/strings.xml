@@ -4,4 +4,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_menu1">Menu1</string>
+    <string name="title_activity_partner_info">PartnerInfoActivity</string>
+    <string name="title_activity_crm_level">CrmLevelActivity</string>
 </resources>

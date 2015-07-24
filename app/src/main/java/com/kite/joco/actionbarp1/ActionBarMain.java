@@ -1,7 +1,6 @@
 package com.kite.joco.actionbarp1;
 
 
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -40,12 +39,11 @@ public class ActionBarMain extends Activity {
             actionBar.setCustomView(myactionbar);
             // itt történik a costum actionbar megjelenítése
             actionBar.setDisplayShowCustomEnabled(true);
-        }
-        catch (Exception nex) {
+        } catch (Exception nex) {
             Log.d("ACTIONBARLOG", " A jó édes anyjáért nincs actionbar: " + nex.getLocalizedMessage());
         }
 
-       // actionBar.setCustomView(R.layout.actbarlayout);
+        // actionBar.setCustomView(R.layout.actbarlayout);
 
     }
 
@@ -63,19 +61,34 @@ public class ActionBarMain extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        else if(id == R.id.about){
-            Toast.makeText(this,"Ezt a programot Józsi csinálta",Toast.LENGTH_LONG).show();
+        switch (id){
+            case (R.id.action_settings):
+                break;
+            case (R.id.home):
+                finish();
+                break;
+            case (R.id.about):
+                Toast.makeText(this, "Ezt a programot Józsi csinálta", Toast.LENGTH_LONG).show();
+            default:
+                break;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View v){
-        Intent i = new Intent(v.getContext(),Menu1Activity.class);
-        startActivity(i);
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+
+            case (R.id.btnMenu):
+                Intent i = new Intent(v.getContext(), Menu1Activity.class);
+                startActivity(i);
+                break;
+
+            case (R.id.btnMenu2):
+                Intent partnerInfo = new Intent(v.getContext(),PartnerInfoActivity.class);
+                startActivity(partnerInfo);
+                break;
+        }
     }
 }

@@ -4,7 +4,12 @@
 
     <uses-sdk android:minSdkVersion="16" />
 
-    <uses-permission  android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
@@ -23,8 +28,17 @@
         </activity>
         <activity
             android:name=".Menu1Activity"
+            android:label="@string/title_activity_menu1"
+            android:parentActivityName=".ActionBarMain" >
+        </activity>
+        <activity
             android:parentActivityName=".ActionBarMain"
-            android:label="@string/title_activity_menu1" >
+            android:name=".PartnerInfoActivity"
+            android:label="@string/title_activity_partner_info" >
+        </activity>
+        <activity
+            android:name=".CrmLevelActivity"
+            android:label="@string/title_activity_crm_level" >
         </activity>
     </application>
 

@@ -24,7 +24,8 @@
         android:id="@+id/btnMenu2"
         android:background="@drawable/mybutton"
         android:layout_margin="5dp"
-        android:text="Második al képernyő"
+        android:text="Partner info minta"
+        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="0dp" />
 
