@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +13,8 @@ import android.widget.Toast;
 
 
 public class CrmLevelActivity extends Activity {
+
+    public static final String LOGTAG = "CRMLEVELACTIVITY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,11 @@ public class CrmLevelActivity extends Activity {
                 break;
             case (R.id.about):
                 Toast.makeText(this, "Ezt a programot Józsi csinálta", Toast.LENGTH_LONG).show();
+                break;
+            case (R.id.search_button):
+                onSearchRequested();
+                Log.d(LOGTAG, "onSearchRequest fired");
+                break;
             default:
                 break;
         }
